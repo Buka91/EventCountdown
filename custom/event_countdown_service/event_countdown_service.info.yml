@@ -1,0 +1,4 @@
+name: Event Countdown Service
+description: Service for calculating how many days are left until the event starts
+type: module
+core: 8.x

@@ -1,0 +1,4 @@
+name: Event Countdown Block
+description: Displays how many days are left until event happens.
+type: module
+core: 8.x

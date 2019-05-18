@@ -1,0 +1,3 @@
+services:
+  event_countdown_service.eventCountdown:
+    class: Drupal\event_countdown_service\EventCountdownService
