@@ -27,8 +27,6 @@ class EventCountdownService {
             return null;
         }
 
-        $connection = \Drupal::database();
-
         try {
             $query = \Drupal::database()->select('node__field_event_date', 'n');
             $query->addField('n', 'field_event_date_value');
@@ -60,6 +58,10 @@ class EventCountdownService {
         $timeDiff = $date->diff($today);
 
         if ($timeDiff->days === 0) {
+            if ($date->format('d') !== $today->format('d')) {
+                return '1 day left until event starts.';
+            }
+
             return 'This event is happening today.';
         }
 
